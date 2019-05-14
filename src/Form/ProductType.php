@@ -16,8 +16,10 @@ class ProductType extends AbstractType
             ->add('description')
             ->add('price')
             ->add('stock')
-            ->add('category')
-        ;
+            ->add('tag', EntityType::class, [
+                'class' => Category::class,
+                'choice_label' => 'name'
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)
