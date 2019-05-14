@@ -6,7 +6,6 @@ use App\Entity\Product;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class ProductType extends AbstractType
 {
@@ -17,10 +16,8 @@ class ProductType extends AbstractType
             ->add('description')
             ->add('price')
             ->add('stock')
-            ->add('category', EntityType::class, [
-                'class' => Category::class,
-                'choice_label' => 'name'
-            ]);
+            ->add('category')
+        ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
