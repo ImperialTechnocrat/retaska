@@ -9,12 +9,12 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>Homepage</h1>
 
-    This friendly message is coming from:
+    Rozcestnik
     <ul>
-        <li>Administrace <code><a href="{{ '/var/www/html/taska/src/Controller/HomepageController.php'|file_link(0) }}">src/Controller/HomepageController.php</a></code></li>
-        <li>Produkty <code><a href="{{ '/var/www/html/taska/templates/homepage/index.html.twig'|file_link(0) }}">templates/homepage/index.html.twig</a></code></li>
+        <li>Administrace <code><a href="{{ path('product_index') }}">'product_index'</a></code></li>
+        <li>Seznam produkty <code><a href="{{ '/var/www/html/taska/templates/homepage/index.html.twig'|file_link(0) }}">templates/homepage/index.html.twig</a></code></li>
     </ul>
 </div>
 {% endblock %}
