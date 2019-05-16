@@ -5,6 +5,8 @@ namespace App\Controller;
 use App\Entity\Order;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class OrderController extends AbstractController
 {
@@ -23,7 +25,7 @@ class OrderController extends AbstractController
      */
     public function new(Request $request): Response
     {
-        $product = new Order();
+        $order = new Order();
         $form = $this->createForm(OrderType::class, $order);
         $form->handleRequest($request);
 
