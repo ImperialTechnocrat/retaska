@@ -11,11 +11,11 @@ use Symfony\Component\HttpFoundation\Response;
 class ListedController extends AbstractController
 {
     /**
-     * @Route("/", name="allproduct_index", methods={"GET"})
+     * @Route("/", name="listed_index", methods={"GET"})
      */
     public function index(ProductRepository $productRepository): Response
 {
-    return $this->render('all_product/index.html.twig', [
+    return $this->render('listed/index.html.twig', [
         'products' => $productRepository->findAll(),
     ]);
 }
