@@ -20,7 +20,7 @@ class ListedController extends AbstractController
         ]);
     }
     /**
-     * @Route("/{id}", name="listed_show", methods={"GET"})
+     * @Route("/show/{id}", name="listed_show", methods={"GET"})
      */
     public function show(Product $product): Response
     {
